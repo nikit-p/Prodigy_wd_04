@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.4 ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+    color: black;
+    font-family: "Poppins";
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1020;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0 128px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+i {
+    cursor: pointer;
+}
+
+header nav .logo {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+header nav .number {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-bars-staggered {
+    width: 25px;
+    font-size: 25px;
+    margin: 20px;
+    z-index: 1030;
+}
+
+.navbar-collapse {
+    background: rgb(0, 0, 0, 0.95);
+    position: fixed;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 1020;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+}
+
+.navbar-collapse.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.fa-xmark,
+.navbar-menus a {
+    color: white;
+}
+
+.nav-center {
+    margin: auto;
+}
+
+.navbar-menus {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+ul li {
+    text-align: center;
+    color: white;
+    padding: 10px;
+    list-style: none;
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+section {
+    position: relative;
+    padding: 48px 0;
+    overflow: hidden;
+}
+
+#home {
+    background: #f5df4e;
+    min-height: 100vh;
+}
+
+.row {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col {
+    align-items: center;
+}
+
+.who {
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.txt-rotate {
+    font-size: 64px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.location {
+    font-size: 20px;
+    margin-bottom: 32px;
+    line-height: 1.8;
+}
+
+.btn {
+    padding: 16px 32px;
+    font-weight: 500;
+    border-width: 2px;
+    transition: all 0.5s ease;
+    margin-top: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn-dark {
+    color: white;
+    background: #212529;
+    border-color: #212529;
+}
+
+.btn-contact {
+    padding: 16px 32px;
+    font-weight: 500;
+    border-width: 2px;
+}
+
+.rounded-pill {
+    padding: 16px;
+    border-radius: 50%;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 1.175);
+    background-color: rgba(248, 249, 250, 1);
+    height: 430px;
+    width: 400px;
+}
+
+.rounded-pill img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+}
+
+/* Scroll down style and animation */
+.scroll-down-arrow {
+    position: absolute;
+    z-index: 3;
+    bottom: 20px;
+    left: 50%;
+    font-size: 20px;
+}
+
+.scroll-down-arrow i {
+    position: relative;
+    animation: fadeInDown 1.5s infinite;
+}
+
+@keyframes fadeInDown {
+    0% {
+        top: -25px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 10px;
+        opacity: 1;
+    }
+}
+
+.container-section {
+    padding: 48px 32px;
+    margin: 0 80px;
+}
+
+.title {
+    text-align: center;
+}
+
+.title span {
+    background: #f5df4e;
+    padding: 0 8px;
+}
+
+.text-center {
+    text-align: center;
+    font-weight: bold !important;
+}
+
+#about h2,
+#services h2,
+#resume h2,
+#contact h2 {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+#about .underline {
+    border-bottom: 3px solid #f5df4e;
+    font-weight: 600;
+}
+
+#about .details {
+    margin-top: 48px;
+}
+
+#about .description {
+    font-size: 20px;
+    margin-top: 16px;
+}
+
+#about .about {
+    width: 70%;
+}
+
+#about .label {
+    color: #6c757d;
+}
+
+#about .value {
+    font-weight: 600;
+}
+
+.sticky-on-top {
+    background: white;
+    border-bottom: 1px solid #efefef;
+}
+
+#services {
+    background: #eee;
+}
+
+#services .details {
+    display: grid;
+    padding-top: 48px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#services .details .col {
+    padding: 16px;
+}
+
+#services .details i {
+    font-size: 48px;
+    margin-bottom: 32px;
+    color: #f5df4e;
+}
+
+#services .featured-box {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#services .featured-box h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+#resume h3 {
+    font-size: 28px;
+    font-weight: 600;
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+
+#resume .resumeBox {
+    padding: 0 16px;
+    border-left: 2px solid #f5df4e;
+    margin-bottom: 16px;
+}
+
+#resume .resumeBox h5 {
+    font-size: 19px;
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+#resume .resumeBox .resume-des {
+    color: #6c757d;
+}
+
+#resume .details {
+    padding-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#resume .details .col p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+#resume .btn {
+    margin-top: 32px;
+    border: 2px solid #f5df4e;
+    outline: none;
+    cursor: pointer;
+}
+
+#resume .details .col {
+    padding: 16px;
+}
+
+.progress {
+    background: #e9ecef;
+    width: 100%;
+    height: 8px;
+    display: flex;
+}
+
+.progress-bar {
+    background: #f5df4e;
+}
+
+hr {
+    margin: 24px 0;
+}
+
+#contact {
+    background: #f5df4e;
+    min-height: 90vh;
+}
+
+#contact .social-icons i {
+    color: #4d555a;
+}
+
+#contact .col h2 {
+    font-size: 32px;
+    margin: 16px 0;
+}
+
+.form-control {
+    text-align: start;
+    margin-bottom: 32px;
+}
+
+.form-control label {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.form-control input {
+    width: 100%;
+    height: 55px;
+    font-size: 25px;
+    background-color: transparent;
+    color: black;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+}
+
+.form-button button {
+    width: 180px;
+}
+
+footer {
+    background: #111418;
+    color: white;
+    padding: 16px 32px;
+}
+
+.back-to-top {
+    position: fixed;
+    font-size: 25px;
+    bottom: 8px;
+    right: 10px;
+}
+
+.back-to-top i {
+    color: #ccc;
+}
+
+.active a {
+    color: #f5df4e;
+}
+
+/* Responsive behavior styles */
+
+@media (max-width: 481px) {
+    header nav {
+        padding: 20px;
+        flex-direction: column-reverse;
+    }
+
+    .txt-rotate {
+        font-size: 48px;
+    }
+
+    .rounded-pill {
+        height: 350px;
+        width: 350px;
+    }
+
+    .rounded-pill img {
+        height: 320px;
+        width: 350px;
+    }
+
+    #services {
+        padding-bottom: 0;
+    }
+
+    #about .details {
+        display: block !important;
+    }
+
+    .details {
+        display: block !important;
+    }
+
+    .container-section {
+        margin: 16px !important;
+        padding: 0 !important;
+    }
+
+    section {
+        padding: 96px 0;
+    }
+}
+
+@media (max-width: 961px) {
+    header nav {
+        padding: 16px;
+    }
+
+    .row {
+        flex-direction: column-reverse;
+    }
+
+    .text-center {
+        margin-bottom: 0px !important;
+    }
+
+    #about,
+    #services,
+    #resume,
+    #contact {
+        padding: 24px 0;
+    }
+
+    #home .who {
+        font-size: 32px;
+        margin-top: 32px;
+    }
+
+    #about .row,
+    #resume .row,
+    #contact .row {
+        flex-direction: column;
+    }
+
+    #contact .row {
+        text-align: center;
+    }
+
+    #about .row h2 {
+        font-size: 25px !important;
+        margin-bottom: 16px;
+    }
+
+    #contact .row h2 {
+        font-size: 40px;
+        margin-bottom: 32px;
+    }
+
+    #about .details {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .details {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .details .col,
+    #contact .col,
+    #contact .row p {
+        margin-bottom: 16px;
+    }
+
+    #contact .col {
+        width: 100%;
+    }
+
+    #about .about {
+        width: auto;
+        text-align: center;
+    }
+
+    .btn,
+    .btn-contact {
+        padding: 16px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
